@@ -6,13 +6,15 @@ alter column shift_time datetime(20)
 #1.Monthly Number of trips, one trip is defined by a unique trip ID
 
 
-Select convert(varchar(7),Employee_Pick_up_Time,126) as Month_Year, count(distinct Trip_id) as Number_of_Trips from question
+Select convert(varchar(7),Employee_Pick_up_Time,126) as Month_Year, count(distinct Trip_id) as Number_of_Trips 
+from question
 group by convert(varchar(7),Employee_Pick_up_Time,126)
 
 #2.First Pickup and Last Pickup time for a trip 
 
 
-select trip_id , convert(varchar(16),min(Employee_Pick_up_Time),120),convert(varchar(16),max(Employee_Pick_up_Time),120) from question
+select trip_id , convert(varchar(16),min(Employee_Pick_up_Time),120),convert(varchar(16),max(Employee_Pick_up_Time),120) 
+from question
 group by trip_id 
 
 #4.Unique employees traveling in Night hours vs Day Hours (Night Hours = before 10 AM or after 6 pm, Day Hours is everything other than night hours.)
