@@ -1,7 +1,12 @@
 use Akhilesh
 select * from question
-alter table question
-alter column shift_time datetime(20)
+insert into question values('2022-03-04 08:00','A1',1,'10:30','LOGIN')
+insert into question values('2022-03-04 08:40','A2',1,'10:30','LOGIN')
+insert into question values('2022-03-04 09:10','A3',1,'10:30','LOGIN')
+insert into question values('2022-03-04 10:00','A4',1,'10:30','LOGIN')
+insert into question values('2022-03-05 19:00','A4',2,'18:50','LOGOUT')
+insert into question values('2022-03-05 19:10','B1',2,'18:50','LOGOUT')
+)
 
 
 #1.Monthly Number of trips, one trip is defined by a unique trip ID
